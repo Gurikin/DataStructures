@@ -11,9 +11,9 @@ $stack->put("Lilu");
 $stack->put("Leon");
 $stack->put("Harry");
 
-echo $stack->get() . "<br>\n";
-echo $stack->get() . "<br>\n";
-echo $stack->get() . "<br>\n";
+foreach ($stack->getList() as $item) {
+    echo $item . "<br>\n";
+}
 
 echo "===========End of Stack. Bye!===========<br>\n";
 
@@ -22,9 +22,10 @@ $queue->put("Lilu");
 $queue->put("Leon");
 $queue->put("Harry");
 
-echo $queue->get() . "<br>\n";
-echo $queue->get() . "<br>\n";
-echo $queue->get() . "<br>\n";
+foreach ($queue->getList() as $item) {
+    echo $item . "<br>\n";
+}
 
 echo "===========End of Queue. Bye!===========<br>\n";
+echo "Memory: " . memory_get_peak_usage() . "<br>\n";
 echo "===========End of script. Bye!===========<br>\n";

@@ -32,8 +32,8 @@ class Queue extends Sequence
         return $item;
     }
 
-    public function isEmpty(): bool
+    protected function getFirst(): ?Node
     {
-        return $this->head == null;
+        return $this->head;
     }
 }
