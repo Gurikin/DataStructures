@@ -8,7 +8,7 @@ namespace DataStructures;
  * Class Stack
  * @package DataStructures
  */
-class Stack
+class Stack extends Sequence
 {
     /** @var Node */
     private $last;
@@ -36,7 +36,7 @@ class Stack
         return $item;
     }
 
-    public function isEmpty()
+    public function isEmpty(): bool
     {
         return $this->last == null;
     }
